@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CorneaSense — AI-powered corneal ulcer detection dashboard. Upload eye images for instant diagnosis using deep learning and Grad-CAM visualization.">
+  <title>CorneaSense — AI Eye Diagnostics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark"><i class="fas fa-eye"></i></div>
+        <span>Cornea<strong>Sense</strong></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#diagnose" class="nav-link">Diagnose</a></li>
+        <li><a href="#how" class="nav-link">How It Works</a></li>
+        <li><a href="#history" class="nav-link">History</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="iot-badge"><span class="dot"></span>IoT Ready</span>
+        <a href="#diagnose" class="btn-cta">Get Diagnosis</a>
+      </div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <p class="hero-sub-tag"><i class="fas fa-shield-alt"></i> Trusted AI Diagnostics</p>
+      <h1 class="hero-title">Detect Corneal<br><em>Ulcers Instantly</em></h1>
+      <p class="hero-desc">Advanced deep learning with <strong>Grad-CAM heatmap visualization</strong> — upload an eye image or connect your IoT device for instant, precise corneal ulcer diagnosis.</p>
+      <div class="hero-buttons">
+        <a href="#diagnose" class="btn-primary"><i class="fas fa-upload"></i> Upload & Diagnose</a>
+        <a href="#how" class="btn-outline-dark"><i class="fas fa-play-circle"></i> See How It Works</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pills">
+          <span class="pill"><i class="fas fa-check"></i> 95%+ Accuracy</span>
+          <span class="pill"><i class="fas fa-bolt"></i> &lt;2s Detection</span>
+          <span class="pill"><i class="fas fa-microscope"></i> UNet++ Model</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-card">
+        <div class="eye-scanner">
+          <div class="scanner-ring r1"></div>
+          <div class="scanner-ring r2"></div>
+          <div class="scanner-ring r3"></div>
+          <div class="eye-glyph"><i class="fas fa-eye"></i><div class="scan-beam"></div></div>
+        </div>
+        <div class="stat-bubble b1"><i class="fas fa-check-circle"></i><div><b>No Ulcer</b><span>Last scan</span></div></div>
+        <div class="stat-bubble b2"><i class="fas fa-brain"></i><div><b>AI Powered</b><span>UNet++</span></div></div>
+        <div class="stat-bubble b3"><i class="fas fa-wifi"></i><div><b>IoT Ready</b><span>Live device</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRAND STRIP ===== -->
+  <div class="brand-strip">
+    <div class="brand-inner">
+      <span>DEEP LEARNING</span>
+      <span class="sep">✦</span>
+      <span>GRAD-CAM VISUALIZATION</span>
+      <span class="sep">✦</span>
+      <span>UNET++ ARCHITECTURE</span>
+      <span class="sep">✦</span>
+      <span>IOT INTEGRATION</span>
+      <span class="sep">✦</span>
+      <span>REAL-TIME DETECTION</span>
+      <span class="sep">✦</span>
+      <span>SEGMENTATION MASKS</span>
+    </div>
+  </div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <div class="section-top">
+        <span class="tag-label">Our Process</span>
+        <h2 class="section-h2">How CorneaSense<br><em>Works</em></h2>
+        <p class="section-sub">Three simple steps from image to AI-powered diagnosis</p>
+      </div>
+      <div class="how-cards">
+        <div class="how-card">
+          <div class="how-num">01</div>
+          <div class="how-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3>Upload Image</h3>
+          <p>Upload a corneal photo or receive one automatically from your connected IoT eye-imaging device</p>
+        </div>
+        <div class="how-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+        <div class="how-card">
+          <div class="how-num">02</div>
+          <div class="how-icon"><i class="fas fa-cogs"></i></div>
+          <h3>AI Analysis</h3>
+          <p>UNet++ with ResNet50 backbone processes the image through our trained deep learning pipeline</p>
+        </div>
+        <div class="how-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+        <div class="how-card">
+          <div class="how-num">03</div>
+          <div class="how-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>View Results</h3>
+          <p>Get instant diagnosis, confidence score, Grad-CAM heatmap, and segmentation mask overlay</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIAGNOSE SECTION ===== -->
+  <section class="diagnose-section" id="diagnose">
+    <div class="container">
+      <div class="section-top">
+        <span class="tag-label">AI Diagnosis</span>
+        <h2 class="section-h2">Analyze Your<br><em>Eye Image</em></h2>
+        <p class="section-sub">Upload a corneal image for instant AI-powered ulcer detection</p>
+      </div>
+
+      <div class="diagnose-grid">
+
+        <!-- LEFT: Upload Panel -->
+        <div class="diag-card" id="upload-card">
+          <div class="diag-card-header">
+            <h3><i class="fas fa-image"></i> Image Input</h3>
+            <div class="source-toggle">
+              <button class="src-btn active" data-src="upload" id="btn-src-upload"><i class="fas fa-upload"></i> Upload</button>
+              <button class="src-btn" data-src="iot" id="btn-src-iot"><i class="fas fa-wifi"></i> IoT</button>
+            </div>
+          </div>
+
+          <!-- Drop Zone -->
+          <div class="drop-zone" id="drop-zone">
+            <div class="dz-inner" id="dz-inner">
+              <div class="dz-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+              <h4>Drag & Drop Eye Image</h4>
+              <p>or click to browse</p>
+              <span class="dz-hint">JPG · PNG · WEBP · Max 10MB</span>
+            </div>
+            <input type="file" id="file-input" accept="image/*" hidden>
+          </div>
+
+          <!-- Preview -->
+          <div class="img-preview" id="img-preview" style="display:none">
+            <div class="preview-wrap">
+              <img id="preview-img" src="" alt="Eye image preview">
+              <button class="remove-btn" id="remove-btn" title="Remove"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="img-meta">
+              <span id="meta-name">image.jpg</span>
+              <span id="meta-size">2.4 MB</span>
+            </div>
+          </div>
+
+          <!-- IoT Panel -->
+          <div class="iot-panel" id="iot-panel" style="display:none">
+            <div class="iot-body">
+              <div class="iot-anim"><div class="iot-ripple"></div><i class="fas fa-broadcast-tower"></i></div>
+              <h4>Waiting for IoT Device</h4>
+              <p>Ensure your IoT camera module is connected and transmitting data</p>
+              <div class="iot-info">
+                <span><i class="fas fa-server"></i> POST /api/iot/receive</span>
+                <span><i class="fas fa-clock"></i> Polling every 5s</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-analyze" id="btn-analyze" disabled>
+            <i class="fas fa-search-plus"></i>
+            <span id="analyze-txt">Detect Ulcer</span>
+            <div class="btn-spin" id="btn-spin" style="display:none"><div class="spin"></div></div>
+          </button>
+        </div>
+
+        <!-- RIGHT: Result Panel -->
+        <div class="diag-card result-card" id="result-card">
+          <div class="diag-card-header">
+            <h3><i class="fas fa-clipboard-check"></i> Diagnosis Result</h3>
+          </div>
+
+          <!-- Empty -->
+          <div class="res-empty" id="res-empty">
+            <div class="res-empty-icon"><i class="fas fa-microscope"></i></div>
+            <h4>No Analysis Yet</h4>
+            <p>Upload an eye image and click<br><strong>"Detect Ulcer"</strong> to begin</p>
+          </div>
+
+          <!-- Loading -->
+          <div class="res-loading" id="res-loading" style="display:none">
+            <div class="loading-anim"><div class="l-ring"></div><i class="fas fa-brain"></i></div>
+            <h4>Analyzing Image…</h4>
+            <p>Running deep learning inference</p>
+            <div class="prog-track"><div class="prog-fill" id="prog-fill"></div></div>
+          </div>
+
+          <!-- Result Content -->
+          <div class="res-content" id="res-content" style="display:none">
+
+            <div class="diag-badge" id="diag-badge">
+              <div class="diag-badge-icon" id="diag-badge-icon"><i class="fas fa-check-circle"></i></div>
+              <div class="diag-badge-text">
+                <span class="diag-label">Diagnosis</span>
+                <span class="diag-value" id="diag-value">No Ulcer Detected</span>
+              </div>
+            </div>
+
+            <div class="conf-block">
+              <div class="conf-row">
+                <span>Confidence Score</span>
+                <span class="conf-pct" id="conf-pct">87%</span>
+              </div>
+              <div class="conf-track"><div class="conf-fill" id="conf-fill"></div></div>
+              <div class="conf-marks"><span>Low</span><span>Moderate</span><span>High</span></div>
+            </div>
+
+            <div class="viz-block">
+              <div class="viz-tabs">
+                <button class="vt active" data-tab="heatmap"><i class="fas fa-fire"></i> Grad-CAM</button>
+                <button class="vt" data-tab="segmentation"><i class="fas fa-draw-polygon"></i> Mask</button>
+                <button class="vt" data-tab="original"><i class="fas fa-image"></i> Original</button>
+              </div>
+              <div class="viz-canvas-wrap">
+                <canvas id="viz-canvas" width="400" height="400"></canvas>
+                <div class="viz-label-overlay" id="viz-lbl">Grad-CAM Heatmap</div>
+              </div>
+            </div>
+
+            <div class="metrics-row">
+              <div class="metric-box"><i class="fas fa-clock"></i><b id="m-time">-</b><span>Inference</span></div>
+              <div class="metric-box"><i class="fas fa-layer-group"></i><b id="m-model">UNet++</b><span>Model</span></div>
+              <div class="metric-box"><i class="fas fa-expand-arrows-alt"></i><b id="m-size">256×256</b><span>Input</span></div>
+            </div>
+
+            <div class="res-actions">
+              <button class="btn-dl" id="btn-dl"><i class="fas fa-download"></i> Download Report</button>
+              <button class="btn-rescan" id="btn-rescan"><i class="fas fa-redo"></i> New Scan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HISTORY ===== -->
+  <section class="history-section" id="history">
+    <div class="container">
+      <div class="section-top">
+        <span class="tag-label">Records</span>
+        <h2 class="section-h2">Scan <em>History</em></h2>
+        <p class="section-sub">Previous diagnosis results at a glance</p>
+      </div>
+
+      <div class="hist-stats">
+        <div class="hs-box green">
+          <div class="hs-icon"><i class="fas fa-check-circle"></i></div>
+          <div><b id="hs-normal">0</b><span>Normal</span></div>
+        </div>
+        <div class="hs-box red">
+          <div class="hs-icon"><i class="fas fa-exclamation-circle"></i></div>
+          <div><b id="hs-ulcer">0</b><span>Ulcer</span></div>
+        </div>
+        <div class="hs-box blue">
+          <div class="hs-icon"><i class="fas fa-images"></i></div>
+          <div><b id="hs-total">0</b><span>Total Scans</span></div>
+        </div>
+        <div class="hs-box coral">
+          <div class="hs-icon"><i class="fas fa-chart-line"></i></div>
+          <div><b id="hs-avg">0%</b><span>Avg Confidence</span></div>
+        </div>
+      </div>
+
+      <div class="hist-table-wrap">
+        <table class="hist-table" id="hist-table">
+          <thead>
+            <tr>
+              <th>#</th><th>Preview</th><th>Date & Time</th>
+              <th>Diagnosis</th><th>Confidence</th><th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="hist-body">
+            <tr id="hist-empty"><td colspan="6">
+              <div class="hist-empty-box">
+                <i class="fas fa-inbox"></i>
+                <p>No scan history yet — start by analyzing an image above.</p>
+              </div>
+            </td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-mark"><i class="fas fa-eye"></i></div>
+          <span>Cornea<strong>Sense</strong></span>
+          <p>AI-powered corneal ulcer detection for research and educational use.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#hero">Home</a>
+          <a href="#diagnose">Diagnose</a>
+          <a href="#how">How It Works</a>
+          <a href="#history">History</a>
+        </div>
+        <div class="footer-links">
+          <h4>Technology</h4>
+          <a href="#">UNet++ Model</a>
+          <a href="#">ResNet50 Backbone</a>
+          <a href="#">Grad-CAM Viz</a>
+          <a href="#">IoT Integration</a>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span>© 2026 CorneaSense — AIOT Corneal Ulcer Detection Project</span>
+        <span class="footer-disc"><i class="fas fa-info-circle"></i> For educational &amp; research use only — not a substitute for professional medical advice</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast-wrap"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
